@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:loginpage/screens/signin_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,11 +14,16 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          child: Text("Log Out"),
+          child: const Text("Log Out"),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: ((context) => SignInScreen())));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: ((context) => const SignInScreen()),
+              ),
+            );
           },
-           ),
+        ),
       ),
     );
   }
